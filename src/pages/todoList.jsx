@@ -14,7 +14,7 @@ const TodoList = () => {
   const fetchTodos = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:4000/todos");
+      const res = await fetch("https://todo-crud-api.onrender.com/todos");
       const data = await res.json();
       setTodos(data.data);
     } catch (err) {
