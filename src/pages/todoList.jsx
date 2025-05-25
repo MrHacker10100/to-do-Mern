@@ -10,11 +10,12 @@ const TodoList = () => {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const API_BASE_URL = "https://todo-crud-api.onrender.com";
 
   const fetchTodos = async () => {
     try {
       setLoading(true);
-      const res = await fetch("https://todo-crud-api.onrender.com/todos");
+      const res = await fetch(`${API_BASE_URL}/todos`);
       const data = await res.json();
       setTodos(data.data);
     } catch (err) {
@@ -39,14 +40,14 @@ const TodoList = () => {
     try {
       setSubmitting(true);
       if (editingId) {
-        await fetch(`http://localhost:4000/update/${editingId}`, {
+        await fetch(`${API_BASE_URL}/update/${editingId}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(form),
         });
         toast.success("Todo updated");
       } else {
-        await fetch("http://localhost:4000/create-todo", {
+        await fetch(`${API_BASE_URL}/create-todo`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(form),
@@ -68,7 +69,8 @@ const TodoList = () => {
   const handleDelete = async (todoId) => {
     try {
       setSubmitting(true);
-      await fetch(`http://localhost:4000/${todoId}`, { method: "PATCH" });
+      await fetch(`${API_BASE_URL}/${todoId}`, { method: "DELETE" });
+      console.log(todoId)
       toast.success("Todo deleted");
       fetchTodos();
     } catch {
