@@ -1,12 +1,45 @@
-# React + Vite
+# 📝 MERN To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack To-Do application built using the MERN stack (MongoDB, Express, React, Node.js). The frontend is deployed using **GitHub Pages**, and the backend is hosted on **Render**.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend (React)**: [https://mrhacker10100.github.io/to-do-Mern/](https://mrhacker10100.github.io/to-do-Mern/)
+- **Backend (Render)**: [https://todo-crud-api.onrender.com](https://todo-crud-api.onrender.com)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+
+- ✅ Add a new To-Do item
+- ✏️ Edit existing To-Dos
+- ❌ Delete To-Do items
+- 📦 Uses MongoDB Atlas for data persistence
+- 🔁 Fully functional REST API
+- ⚛️ Built with Vite + React + Tailwind CSS
+
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+- React
+- Tailwind CSS
+- React Toastify
+- Vite
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas (with Mongoose)
+- Render (for deployment)
+
+---
+
+## 🚀 Getting Started (Local Setup)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/to-do-Mern.git
+cd to-do-Mern
